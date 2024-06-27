@@ -8,6 +8,7 @@
   <meta name="description" content="HTML5 website template">
   <meta name="keywords" content="global, template, html, sass, jquery">
   <meta name="author" content="Bucky Maler">
+  <link rel="icon" href="assets/img/logo.png" type="image/x-icon">
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
@@ -40,7 +41,7 @@
             <li class="is-active"><span>Home</span></li>
             <li><span>Works</span></li>
             <li><span>About</span></li>
-            <li><span>Contact</span></li>
+            <!-- <li><span>Contact</span></li> -->
             <li><span>Hire us</span></li>
           </ul>
         </nav>
@@ -79,36 +80,8 @@
             <div class="work">
               <h2>Selected work</h2>
               <div class="work--lockup">
-                <ul class="slider">
-                  <li class="slider--item slider--item-left">
-                    <a href="https://www.nilkanthtextilegroup.com">
-                      <div class="slider--item-image">
-                        <img src="assets/img/work-victory.jpg" alt="Victory">
-                      </div>
-                      <p class="slider--item-title">SHREE SHUKAN INDUSTRIES LLP</p>
-                      <p class="slider--item-description">At Shree Shukan Textiles Industries we are all the time concerned about the way we create wealth</p>
-                    </a>
-                  </li>
-                  <li class="slider--item slider--item-center">
-                    <a href="https://www.whisttler.com">
-                      <div class="slider--item-image">
-                        <img src="assets/img/work-metiew-smith.jpg" alt="Metiew and Smith">
-                      </div>
-                      <p class="slider--item-title">Whisttler</p>
-                      <p class="slider--item-description">The
-                        Influencer Marketing
-                        Mercenaries.</p>
-                    </a>
-                  </li>
-                  <li class="slider--item slider--item-right">
-                    <a href="https://www.murlidharprinters.com/">
-                      <div class="slider--item-image">
-                        <img src="assets/img/work-alex-nowak.jpg" alt="Alex Nowak">
-                      </div>
-                      <p class="slider--item-title">Murlidharprinters</p>
-                      <p class="slider--item-description">MPPL is powering high-fashion Indian wear brands spanning the globe, while delivering unparalled excellence across the apparel value chain.</p>
-                    </a>
-                  </li>
+                <ul class="slider" id="slid">
+                
                 </ul>
                 <div class="slider--prev">
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -133,7 +106,25 @@
           <li class="l-section section">
             <div class="about">
               <div class="about--banner">
-                <h2>We<br>believe in<br>passionate<br>people</h2>
+                <h3>
+                  Techmeninfotech was founded in 2020 with a mission to provide innovative and reliable IT solutions that drive business success
+                </h3>
+                <h3>
+                  Our Service
+                </h3>
+                <ul>
+                  <li>Software Development</li>
+                  <br/>
+                  <li>IT Consulting</li>
+                  <br/>
+                  <li>Cybersecurity</li>
+                </ul>  
+                
+                <h3>
+                  Ready to take your business to the next level?
+                  <br/>
+                  Contact us today for more information or to schedule a consultation.
+                </h3>
                 <!-- <a href="#0">Career
                   <span>
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
@@ -147,18 +138,19 @@
               </div>
               <div class="about--options">
                 <a href="#0">
-                  <h3>Winners</h3>
+                  <h3>Innovative</h3>
                 </a>
                 <a href="#0">
-                  <h3>Philosophy</h3>
+                  <h3>Reliable</h3>
                 </a>
                 <a href="#0">
-                  <h3>History</h3>
+                  <h3>Customer-Centric
+                  </h3>
                 </a>
               </div>
             </div>
           </li>
-          <li class="l-section section">
+          <!-- <li class="l-section section">
             <div class="contact">
               <div class="contact--lockup">
                 <div class="modal">
@@ -174,7 +166,7 @@
                 </div>
               </div>
             </div>
-          </li>
+          </li> -->
 
           <!-- get the table data -->
           <li class="l-section section">
@@ -184,7 +176,7 @@
               <form class="work-request">
                 <div class="work-request--options">
                   <span class="options-a">
-                    <input id="opt-1" type="checkbox" value="app design">
+                    <input id="opt-1" type="checkbox" value="app design" onclick="handleClick(event)">
                     <label for="opt-1">
                       <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                       viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
@@ -194,7 +186,7 @@
                       </svg>
                       App Design
                     </label>
-                    <input id="opt-2" type="checkbox" value="graphic design">
+                    <input id="opt-2" type="checkbox" value="graphic design" onclick="handleClick(event)">
                     <label for="opt-2">
                       <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                       viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
@@ -204,7 +196,7 @@
                       </svg>
                       Graphic Design
                     </label>
-                    <input id="opt-3" type="checkbox" value="motion design">
+                    <input id="opt-3" type="checkbox" value="motion design" onclick="handleClick(event)">
                     <label for="opt-3">
                       <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                       viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
@@ -216,7 +208,7 @@
                     </label>
                   </span>
                   <span class="options-b">
-                    <input id="opt-4" type="checkbox" value="ux design">
+                    <input id="opt-4" type="checkbox" value="ux design" onclick="handleClick(event)">
                     <label for="opt-4">
                       <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                       viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
@@ -226,7 +218,7 @@
                       </svg>
                       UX Design
                     </label>
-                    <input id="opt-5" type="checkbox" value="webdesign">
+                    <input id="opt-5" type="checkbox" value="webdesign" onclick="handleClick(event)">
                     <label for="opt-5">
                       <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                       viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
@@ -236,7 +228,7 @@
                       </svg>
                       Webdesign
                     </label>
-                    <input id="opt-6" type="checkbox" value="marketing">
+                    <input id="opt-6" type="checkbox" value="marketing" onclick="handleClick(event)">
                     <label for="opt-6">
                       <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                       viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
@@ -250,15 +242,15 @@
                 </div>
                 <div class="work-request--information">
                   <div class="information-name">
-                    <input id="name" type="text" spellcheck="false">
+                    <input id="name" type="text" spellcheck="false" onchange="handleChangename(event)">
                     <label for="name">Name</label>
                   </div>
                   <div class="information-email">
-                    <input id="email" type="email" spellcheck="false">
+                    <input id="email" type="email" spellcheck="false" onchange="handleChangeEmail(event)">
                     <label for="email">Email</label>
                   </div>
                 </div>
-                <input type="submit" value="Send Request" onclick="handleSubmit()">
+                <input type="submit" value="Send Request" onclick="handleSubmit(event)">
               </form>
             </div>
           </li>
@@ -270,7 +262,7 @@
     <li class="is-active">Home</li>
     <li>Works</li>
     <li>About</li>
-    <li>Contact</li>
+    <!-- <li>Contact</li> -->
     <li>Hire us</li>
   </ul>
 </div>
@@ -278,6 +270,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
 <script src="assets/js/functions-min.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 <script src="./assets/js/app.js"></script>
 </body>
 </html>
